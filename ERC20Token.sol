@@ -16,8 +16,8 @@ contract MyToken is ERC20 {
     }
 
     // Only owner can mint tokens to their own address
-    function ownerMintToken(uint256 qtyToken) public exclusiveOwner {
-        _mint(msg.sender, qtyToken);
+    function ownerMintToken(address recipient, uint256 qtyToken) public exclusiveOwner {
+        _mint(recipient, qtyToken);
     }
 
     // Transfer (any user)
