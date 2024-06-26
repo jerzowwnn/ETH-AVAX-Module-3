@@ -15,7 +15,7 @@ contract MyToken is ERC20 {
         _;
     }
 
-    // Only owner can mint tokens to their own address
+    // Only owner can mint tokens to specified address
     function ownerMintToken(address recipient, uint256 qtyToken) public exclusiveOwner {
         _mint(recipient, qtyToken);
     }
